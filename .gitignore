@@ -1,0 +1,23 @@
+*.pyc
+
+__pycache__
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+*secrets.json
+secrets.json
+
+DS_STORE
+
+build
+build/*
+*.egg-info
+flip.egg-info
+dist
+dist/*
+.pytest_cache
+.pytest_cache/

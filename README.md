@@ -1,6 +1,6 @@
 # flip-rpc-client-python
 
-Python client for accessing Flip RPC Interface
+Python3 client for accessing Flip RPC Interface
 
 ## Usage
 

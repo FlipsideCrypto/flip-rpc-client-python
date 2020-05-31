@@ -1,6 +1,6 @@
 import os
 
-from flip_rpc_client import Client, Condition
+from flip_rpc_client import Client, Segment
 
 
 def get_client():
@@ -42,14 +42,14 @@ def make_condition():
 
 
 def test_condition_GetMembers():
-    condition = Condition(get_client())
-    result = condition.get_members(make_condition())
+    segment = Segment(get_client())
+    result = segment.get_members(make_condition())
     assert result.get('member_count') != None
 
 
-def test_condition_IntersectMembersToCondition():
-    condition = Condition(get_client())
-    result = condition.intersect_members_to_condition(
+def test_condition_IntersectMembersToSegment():
+    segment = Segment(get_client())
+    result = segment.intersect_members_to_segment(
         ["a0969f676e0274c34fffb4261b59d3de48de0d5845ed9780ac43045cf954ed81"],
         make_condition()
     )

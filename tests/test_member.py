@@ -15,7 +15,7 @@ def get_client():
     return Client(api_key, base_url)
 
 
-def test_condition_GetMemberPartitions():
+def test_member_GetPartitions():
     member = Member(get_client())
     entity_id = "ad43bf8e-0f0c-4102-be91-52bc84150af2"
     member_id = "a0969f676e0274c34fffb4261b59d3de48de0d5845ed9780ac43045cf954ed81"

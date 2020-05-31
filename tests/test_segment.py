@@ -41,13 +41,13 @@ def make_condition():
     }
 
 
-def test_condition_GetMembers():
+def test_segment_GetMembers():
     segment = Segment(get_client())
     result = segment.get_members(make_condition())
     assert result.get('member_count') != None
 
 
-def test_condition_IntersectMembersToSegment():
+def test_segment_IntersectMembersToSegment():
     segment = Segment(get_client())
     result = segment.intersect_members_to_segment(
         ["a0969f676e0274c34fffb4261b59d3de48de0d5845ed9780ac43045cf954ed81"],

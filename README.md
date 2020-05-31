@@ -25,12 +25,12 @@ client = Client("<api-key>", "<base_url>")
 
 ```
 
-### Get Condition Members
+### Get Segment Members
 
-Evaluate a condition and retrieve the members.
+Evaluate a segment's conditions and retrieve the members.
 
 ```python
-from flip_rpc_client import Condition
+from flip_rpc_client import Segment
 
 condition_logic = {
     "and": [
@@ -57,17 +57,17 @@ condition_logic = {
     }
 }
 
-condition = Condition(client)
-result = condition.get_members(condition_logic)
+segment = Segment(client)
+result = segment.get_members(condition_logic)
 
 ```
 
-### Intersect Members to Condition
+### Intersect Members to Segment
 
-Identify the intersection of an array of members to evaluated conditions.
+Identify the intersection of an array of members to evaluated segment's conditions.
 
 ```python
-from flip_rpc_client import Condition
+from flip_rpc_client import Segment
 
 condition_logic = {
     "and": [
@@ -97,8 +97,8 @@ condition_logic = {
 members = ["a0969f676e0274c34fffb4261b59d3de48de0d5845ed9780ac43045cf954ed81"]
 
 
-condition = Condition(client)
-result = condition.intersect_members_to_condition(
+segment = Segment(client)
+result = segment.intersect_members_to_segment(
     members,
     condition_logic
 )
@@ -109,7 +109,7 @@ result = condition.intersect_members_to_condition(
 For a particular entityID and memberID return the partitions that the member belongs to.
 
 ```python
-from flip_rpc_client import Condition
+from flip_rpc_client import Member
 
 entity_id = "ad43bf8e-0f0c-4102-be91-52bc84150af2"
 member_id = "a0969f676e0274c34fffb4261b59d3de48de0d5845ed9780ac43045cf954ed81"
@@ -129,6 +129,22 @@ from flip_rpc_client import Datasets
 d = Datasets(client)
 result = d.get()
 
+```
+
+### Execute Dynamic Query
+
+Execute a query
+
+```python
+from flip_rpc_client import DynamicQuery
+
+query = {...}
+
+dynamic_query = DynamicQuery(client)
+result = dynamic_query.execute(
+    query,
+    debug=True
+)
 ```
 
 ## Tests

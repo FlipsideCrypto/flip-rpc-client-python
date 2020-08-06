@@ -155,5 +155,5 @@ Set environment variables `FLIP_API_KEY` and `FLIP_BASE_URL`.
 export FLIP_API_KEY=<your-api-key>;
 export FLIP_BASE_URL=<flip-rpc-service-url>;
 
-cd tests && pytestl
+cd tests && pytest
 ```

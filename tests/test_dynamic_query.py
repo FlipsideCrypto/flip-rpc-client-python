@@ -86,5 +86,5 @@ def make_query():
 
 def test_dynamic_query_Execute():
     dynamic_query = DynamicQuery(get_client())
-    result = dynamic_query.execute(make_query())
+    result = dynamic_query.execute(make_query(), 3600)
     assert result.get('result_count') != None

@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 dependencies = [
-    "requests==2.20.0"
+    "requests==2.31.0"
 ]
 
 setup(
